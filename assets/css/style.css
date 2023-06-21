@@ -24,12 +24,23 @@ https://vecta.io/nano
 :root {
     --dominant-color: #FFFFFF;
     --secondary-color: #202124;
+    --tertiary-color: #E8EAED;
     --accent-color: #4880FF;
 
     --text_color1: #000000;    
     --text_color2: #7A7A7A;
     --text_color3: #2E3646;    
     --text_color4: #5F6D7E;
+
+    --large-tittle: 4.5rem;
+    --medium-tittle: 2.5rem;
+    --small-tittle: 1.5rem;
+    --small-p-font: 1.1rem;
+
+    --font1: 'Nunito', sans-serif; 
+    --font2: 'Inter', sans-serif; 
+
+    --regular_padding: 2.5rem
 
  
     box-sizing: border-box;
@@ -45,6 +56,8 @@ https://vecta.io/nano
     padding: 0;
     font-family: "Inter", sans-serif;
     font-weight: 300;
+    list-style: none;
+    scroll-behavior: smooth;
 }
 
 
@@ -62,63 +75,117 @@ body > section {
   padding: 1rem;
   display: flex;
   flex-direction:column;
-  gap: 1rem;
+  gap: 1rem; 
 }
 
 
-#hero-section{
 
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-
-.heroTxt{ 
-  padding: 1rem;
+header {
+  padding: 0.7rem 1rem;
+  position: fixed;
+  width: 100%; 
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-
-
-    .google-play-badge-btn{
-      padding: auto;
-      background: none;
-      border: none;
-
-        #google-btn{
-          width: 14em;
-          height: auto;
-        }
-    } 
-}
-
-/* #hero-pic{
-  width: 48%;
-  height: auto;
-  
-}
+  align-items: center;
+  justify-content: space-around;
+  background: var(--text_color1);
+  transition: all .50s ease-in-out;
 
 }
 
+header.sticky{
+  padding: 0.8rem 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: var(--dominant-color);
+ }
 
-
-
-@media (max-width: 550px) {
-  #hero-section { 
-    grid-template-columns: repeat(1, 1fr); 
-  }
-  #hero-pic{
-    width: 48%;
-    height: auto;
-  }
-}
-
-@media (min-width: 900px) {
-  #hero-section { 
-    grid-template-columns: repeat(2, 1fr); 
-  }
+header.sticky .logo .menu_logo{
+  color: var(--secondary-color);
 }
 
 
- */
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;   
+}
+
+header ul li a{
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  color: var(--tertiary-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-family: var(--font1);
+  font-size: var(--small-p-font);
+  transition: all .50s ease;
+}
+
+header ul li a:hover{
+color: var(--accent-color);
+ }
+
+header.sticky ul li a{
+  color: var(--text_color1);
+  font-family: var(--font1);
+  font-size: var(--small-p-font);
+}
+
+header.sticky ul li a:hover{
+  color: var(--accent-color);
+}
+
+
+
+.nav-icons{
+  padding: 0.5rem;
+  border: 0.15rem solid black;
+  background-color: var(--dominant-color);
+  box-shadow: 6px 6px black;
+}
+
+.nav-icons a{
+  color: var(--text_color1);
+  text-decoration: none;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+  font-family: var(--font2);
+  font-weight: 500;
+  word-spacing: 0.125rem;
+}
+
+.nav-icons a:hover{
+  color: var(--text_color3);
+  text-decoration: underline;
+ 
+}
+
+
+header .logo{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
+
+    .menu_logo{
+      font-size: var(--small-tittle);
+      font-weight: 900;
+      color: var(--tertiary-color);
+    }
+
+    #logo_pic {
+      height: 3em;
+    }
+
+
+}
+
+
