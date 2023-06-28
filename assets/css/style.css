@@ -32,9 +32,10 @@ https://vecta.io/nano
     --text_color3: #2E3646;    
     --text_color4: #5F6D7E;
 
-    --large-tittle: 4.5rem;
+    --large-tittle: 4rem;
     --medium-tittle: 2.5rem;
     --small-tittle: 1.5rem;
+    --medium-p-font: 1.2rem;
     --small-p-font: 1.1rem;
 
     --font1: 'Nunito', sans-serif; 
@@ -51,13 +52,15 @@ https://vecta.io/nano
 }
 
 *, *::after, *::before {
-    box-sizing: inherit;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
     font-weight: 300;
     list-style: none;
     scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    text-decoration: none;
 }
 
 
@@ -71,17 +74,19 @@ body {
 
 body > section {
   width: 100%;
-  min-height: 100vh;
-  padding: 1rem;
+  height: 100vh;
+  padding: 2rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction:column;
-  gap: 1rem; 
+  gap: 1rem;  
+  background-color: var(--dominant-color);
 }
 
 
 
 header {
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 2.4rem;
   position: fixed;
   width: 100%; 
   top: 0%;
@@ -89,22 +94,28 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background: var(--text_color1);
+  justify-content: space-between;
+  background: var(--dominant-color);
   transition: all .50s ease-in-out;
 
 }
 
-header.sticky{
-  padding: 0.8rem 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background: var(--dominant-color);
- }
+header .logo{
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
 
-header.sticky .logo .menu_logo{
-  color: var(--secondary-color);
+    .menu_logo{
+      font-size: var(--small-tittle);
+      font-weight: 900;
+      color: var(--secondary-color);
+    }
+
+    #logo_pic {
+      height: 3em;
+    }
 }
-
 
 header ul {
   position: relative;
@@ -120,9 +131,9 @@ header ul li a{
   position: relative;
   display: inline-block;
   margin: 1rem;
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--font1);
   font-size: var(--small-p-font);
   transition: all .50s ease;
@@ -132,17 +143,34 @@ header ul li a:hover{
 color: var(--accent-color);
  }
 
+/*  */
+header.sticky{
+  padding: 1rem 2.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: var(--text_color1);
+ }
+
+header.sticky .logo .menu_logo{
+  color: var(--tertiary-color);
+}
+
+
 header.sticky ul li a{
-  color: var(--text_color1);
+  color: var(--tertiary-color);
   font-family: var(--font1);
   font-size: var(--small-p-font);
+  font-weight: 700;
+}
+
+header.sticky ul li a.active{
+  color: var(--accent-color);
 }
 
 header.sticky ul li a:hover{
   color: var(--accent-color);
 }
 
-
+/*  */
 
 .nav-icons{
   padding: 0.5rem;
@@ -165,27 +193,164 @@ header.sticky ul li a:hover{
 .nav-icons a:hover{
   color: var(--text_color3);
   text-decoration: underline;
- 
 }
 
 
-header .logo{
+.largeTittle{
+  width: 100%;
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 900;
+  font-style: var(--font1);
+  font-size: var(--large-tittle);
+  ;
+}
+
+
+.content {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contentBx.w50 {
+  padding: inherit;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contentBx h3{
+    font-size: var(--medium-tittle);
+    padding-bottom: 0.1rem;
+  }
+
+.w50{
+  min-width: 50%;
+  align-items: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+/* landing hero */
+
+#heroTittle{
+  text-align: left;
+
+}
+
+
+.btnStrt{
+  display: flex;
+  flex-direction: row;
+  /* aqui cambiar cuando se hace responsive */
+  justify-content: left;
+  width: 100%;
+  align-items: center;
+  padding-top: 1rem;
+  
+}
+
+
+.btn1{
+  width: fit-content;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2em;
+  font-family: var(--font1);
+  font-size: var(--small-p-font);
+  font-weight: 600;
+  background-color: var(--accent-color);
+  color: var(--tertiary-color);
+  border: none;
+}
+
+
+.btn1:hover{
+  background: var(--secondary-color);
+  color: var(--tertiary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn1 i{
+  padding-left:  1rem; 
+
+}
+
+
+/* google */
+#google-btn{
+min-width: 100%;
+}
+
+
+#overview{
+/*  background: var(--tertiary-color);
+ */
+  height: 75vh; 
+  width: 100%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--text_color3);
+
+  .alt{
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+
+}
+
+.feature-list{
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-  text-decoration: none;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: 2rem;
+} 
 
-    .menu_logo{
-      font-size: var(--small-tittle);
-      font-weight: 900;
-      color: var(--tertiary-color);
-    }
-
-    #logo_pic {
-      height: 3em;
-    }
-
+.cardFeat{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--tertiary-color);
+  padding: 1rem 2rem;  
+  transition: transform .3s ease;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--text_color4);
 
 }
 
+.cardFeat span{
+  color: var(--secondary-color);
+  font-weight: 500;
 
+}
+
+.cardFeat:hover{
+  box-shadow: rgba(11, 81, 185, 0.349) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  transform: translateY(8px);
+} 
+
+img.cardPic {
+  height: 5rem;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+#feature-1{
+  min-height: 100vh; 
+  width: 100%;
+
+}
+
+.ov{
+  display: flex;
+  flex-direction: column;
+}
