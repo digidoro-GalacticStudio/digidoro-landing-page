@@ -247,7 +247,7 @@ header.sticky .ico-menu:hover{
 }
 
 .home-img img{
-  width: 95%;
+  width: 90%;
   height: auto;
 }
 
@@ -255,7 +255,7 @@ header.sticky .ico-menu:hover{
   font-size: var(--large-tittle);
   font-weight: 700;
   line-height: 1.3;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
 }
 
@@ -270,27 +270,23 @@ header.sticky .ico-menu:hover{
 
 .btn{
   display: inline-block;
-  padding: 0.8rem 1rem;
-  border-radius: 3rem;
+  padding: 0.6rem 2rem;
+  border-radius: 0.8rem;
   font-family: var(--font1);
-  font-size: var(--p-font);
+  font-size: var(--small-tittle);
   font-weight: 700;
-  background-color: var(--accent-color);
-  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+  color: var(--dominant-color);
   border: none;
   transition: all 0.5s ease-in-out;
+  letter-spacing: 1px;
 }
 
 .btn:hover{
-  background: var(--secondary-color);
+  background: var(--accent-color);
   color: var(--tertiary-color);
 }
 
-.btn1 i{
-  padding-left:  1rem; 
-  vertical-align: middle;
-  font-size: var(--p-font);
-}
 
 .btn1:hover{
   background: var(--secondary-color);
@@ -301,16 +297,25 @@ header.sticky .ico-menu:hover{
 .btn2{
   display: inline-block;
   margin-left: 1rem;
+  
   font-family: var(--font1);
   font-size: var(--p-font);
   font-weight: 600;
-  color: var(--secondary-color);  
-  border-bottom: 3px solid var(--accent-color);  transition: all 0.5s ease-in-out;
+
+  color: var(--secondary-color); 
+  border-bottom: 3px solid var(--accent-color);  
+  transition: all 0.5s ease-in-out;
+}
+
+.btn2 i{
+  vertical-align: middle;
+  padding-left:  0.2rem; 
+  font-size: var(--p-font);
 }
 
 .btn2:hover{
-  color: var(--secondary-color);  
   border-bottom: 3px solid var(--secondary-color);  transition: all 0.5s ease-in-out;
+  transform: scale(1.1) translateX(12px);
 }
 
 
