@@ -7,6 +7,12 @@
     --tertiary-color: #E8EAED;
     --accent-color: #4880FF;
 
+    --accent-color1: #C7B9FF;
+    --accent-color2: #8CC6E7;
+    --accent-color3: #85E0A3;
+    --accent-color4: #FFC700;
+
+
     --text_color1: #000000;    
     --text_color2: #7A7A7A;
     --text_color3: #2E3646;    
@@ -18,6 +24,8 @@
 
     --small-tittle: 1.5rem;
     --p-font: 1.1rem;
+    --p-font2: 1.3rem;
+
 
     --font1: 'Nunito', sans-serif; 
     --font2: 'Inter', sans-serif; 
@@ -459,13 +467,84 @@ header.sticky .ico-menu:hover{
 
 /* Testimonials */
 
+.testimonial{
+  height: fit-content;
+  margin-bottom: 5rem;
+}
+
+
 .testimonial-content{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,auto));
   gap: 2rem;
   align-items: center;
-  margin-top: 4rem;
+  margin: 2rem 0;
 }
+
+.box{
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 10px 10px var(--text_color1);
+  border: 2px solid var(--text_color1);
+}
+
+
+.box span{
+  color: var(--accent-color);
+}
+
+.bi-quote{
+  font-size: var(--small-tittle);
+}
+
+.box p{
+  font-size: var(--p-font);
+  font-family: var(--font2);
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.in-box{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+}
+
+.box-img i{
+  color: var(--dominant-color);
+  font-size: 1.5rem; 
+  border-radius: 3rem;
+  background: var(--secondary-color);
+  padding: 0.7rem 0.9rem;
+}
+
+.box-text{
+  font-family: var(--font2);
+}
+
+.box-text h4{
+  font-size: var(--p-font2);
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.box-text h5{
+  font-size: var(--p-font);
+  font-weight: 400;
+  padding: 0.2rem 0 ;
+  color: var(--text_color4);
+}
+
+.ratings i{
+  color: var(--accent-color4);
+  font-size: var(--p-font2);
+}
+
+
+
+
 
 .middle-text{
   text-align: center;
@@ -481,6 +560,7 @@ header.sticky .ico-menu:hover{
 .middle-text h2{
   font-size: var(--medium-tittle);
   font-weight: 800;
+  color: var(--accent-color);
 }
 
 
