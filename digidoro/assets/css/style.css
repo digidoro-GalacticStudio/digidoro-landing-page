@@ -715,7 +715,7 @@ header.sticky .ico-menu:hover{
   }
   .menu{
     position: absolute;
-    top: 100%;
+    top: -1000%;
     left: 0;
     right: 0;
     display: flex;
@@ -735,13 +735,9 @@ header.sticky .ico-menu:hover{
     padding: 1rem;
     color: var(--secondary-color);
   }
-
   .menu .open{
     top: 100%;
   }
-
-
-
   
 }
 
