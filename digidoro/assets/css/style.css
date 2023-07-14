@@ -661,6 +661,7 @@ header.sticky .ico-menu:hover{
   bottom: 2.2rem;
   border-top: 2rem;
   right: 3.2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .scroll i{
@@ -745,11 +746,9 @@ header.sticky .ico-menu:hover{
   :root{
     --xlarge-tittle: 4rem;
     --large-tittle: 3.3rem;
-    /* --medium-tittle: 1.6rem;
+   --medium-tittle: 1.6rem;
 
     --small-tittle: 1rem;
-    --p-font: 0.6rem;
-    --p-font2: 0.7rem; */
   }
 
   .home-img img{
@@ -845,7 +844,45 @@ header.sticky .ico-menu:hover{
 
   .home-text a{
     margin-bottom: 10%;
-
   }
+
+  .details{
+    gap: 1.5rem;
+  }
+}
+
+@media(max-width: 475px){
+  :root{
+    --xlarge-tittle: 3rem;
+    --large-tittle: 2.5rem;
+  }
+
+}
+
+@media(max-width: 440px){
+  .home{
+    height: fit-content;
+    padding-top: 30%;
+  }
+
+  .features-overview{
+    height: fit-content;
+    padding-top: 30%;
+  }
+
+  .features p{
+    font-size: var(--p-font);
+  }
+
+  .features span{
+    line-height: normal;
+    font-size: var(--samll-tittle);
+  }
+
+  .contact-img{
+  align-items: center;
+  justify-content: center;
+  }
+
 }
 
